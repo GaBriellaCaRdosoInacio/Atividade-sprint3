@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Nome aluno: <input type="text" id="input_nomeAluno">
+<button onclick="cadastro()">Cadastrar Aluno</button>
+<br>
+<div id="mensagem"></div>
+</body>
+</html>
+
+<script>
+
+var listaAluno= [ ];
+
+function cadastro() {
+    var nomeA= input_nomeAluno.value;
+    listaAluno.unshift(nomeA);
+
+    mensagem.innerHTML = ' '
+
+    for (var posicao=0; posicao < listaAluno.length; posicao ++){
+       var nomeLista= listaAluno[posicao];
+        mensagem.innerHTML += `${nomeLista} <br>`
+    }
+}
+
+
+
+// var listaFilmes = [];
+//     function cadastrarFilme() {
+//         var filme = input_filme.value;
+//         listaFilmes.push(filme);
+
+//         div_filmes.innerHTML = "";
+//         for (
+//             var posicao = 0;
+//             posicao < listaFilmes.length;
+//             posicao++
+//         ) {
+//             var filmeDaLista = listaFilmes[posicao]; 
+//             div_filmes.innerHTML += 
+//                 `${filmeDaLista}<br>`;
+//         }
+    
+
+</script>

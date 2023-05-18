@@ -1,0 +1,14 @@
+- para exibição dos itens 
+
+- para o for não repetir a lista é necessário limpar a div ANTES do for 
+
+-  é possivel criar uma variavel de cor 
+
+- da para começar chutando alguma cor e validar por if da seguinte forma:
+
+var cor= 'red';
+if( posicao % 2 ==0){
+    cor= 'blue';
+}
+
+- é possivel deixar o if sem chave {} caso não precise de outro if ou else ou else if nessa function 

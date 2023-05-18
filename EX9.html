@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    nome do projeto que participou: <input type="text" id="input_nomeProjeto"> <br>
+    <button onclick="registro()">Registrar Projeto</button> 
+    <button onclick="mostrar()">Mostrar Projetos</button>
+<div id="mensagem"></div>
+</body>
+</html>
+
+<script>
+
+var listaProjeto= [ ];
+
+function registro() {
+    var projeto= input_nomeProjeto.value;
+    listaProjeto.unshift(projeto);
+    var posicao=0
+
+mensagem.innerHTML= `Você já fez ${listaProjeto.length} projetos. Por isso você é um profissional`
+
+if(listaProjeto.length <= 4){
+    mensagem.innerHTML+= ' Júnior'
+}
+
+else if (listaProjeto.length >=5 && listaProjeto.length<=12 ){
+    mensagem.innerHTML+= ` Pleno desde o projeto ${listaProjeto[4]}`   
+}
+
+else{
+    mensagem.innerHTML+= ` Sênior desde o projeto ${listaProjeto[12 ]}" `
+}
+}
+
+function mostrar(){
+    mensagem.innerHTML+= ' '
+    for(var posicao=0 ; posicao<listaProjeto.length; posicao++){
+        mensagem.innerHTML+= ` <br> ${listaProjeto[posicao]} `
+    }
+}
+
+</script>

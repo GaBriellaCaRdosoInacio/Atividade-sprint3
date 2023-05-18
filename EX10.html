@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    nome linha do onibus: <input type="text" id="input_nomeBus">
+    <button onclick="gravar()">Gravar buzão</button> <br>
+    pesquisar linha que você já pegou: <input type="text" id="input_linhaPesquisada">
+    <button onclick="pesquisar()">Pesquisar</button>
+    <div id="mensagem"></div>
+
+</body>
+</html>
+
+<script>
+
+var listaBus= [ ];
+
+function gravar(){
+    var nomebus= input_nomeBus.value;
+    listaBus.unshift(nomebus);
+
+    mensagem.innerHTML= ' '
+
+    for (var posicao=0; posicao < listaBus.length; posicao ++){
+       var busLista= listaBus[posicao];
+        mensagem.innerHTML += `${busLista} <br>`
+} 
+}
+
+function pesquisar(){
+
+
+    var linhaP= input_linhaPesquisada.value;
+
+    var validacao= listaBus.indexOf(linhaP) < 0;
+
+    if (validacao){
+        mensagem.innerHTML+= `  Você nunca pegou essa linha`
+    }
+
+   else{
+    if (linhaP == listaBus.indexOf){
+
+        if(linhaP == listaBus[listaBus.lenght[2]] && linhaP == listaBus[listaBus.lenght[4]] && linhaP == listaBus[lista.Bus.lenght [8]] && linhaP == listaBus[listaBus.lenght[9]]){
+mensagem.innerHTML+= `Você já pegou essa linha 4 vezes, nessa ordem: 2, 4, 8, 9 `
+    }
+   }
+
+}
+
+} 
+
+</script>
