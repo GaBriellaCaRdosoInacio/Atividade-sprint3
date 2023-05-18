@@ -1,0 +1,29 @@
+Aula sobre numeros aleatorios 
+
+--> Math.random
+
+--> o Math sempre gera entre 0 e 0.99
+
+--> passar parametro não gera um numero 
+
+--> multiplicar pelo numero aleatorio faz com que o limite aumente 
+
+--> chega 1 numero antes do multiplicado (que tem a funcao de aumentar o limite)
+
+--> Math.random() * 5 {essa é a sintaxe}
+
+--> aumentar o mínimo (+)
+
+--> formula numero aleatorio 
+
+ex: function ----(){   --> entre x e y 
+    var min= 10;
+    var max= 25;
+    var intervalo = max - min;
+
+    var aleatorio= Math.random() * intervalo;
+    (local var) resultado: number
+
+    var resultado = aleatorio + min
+}
+

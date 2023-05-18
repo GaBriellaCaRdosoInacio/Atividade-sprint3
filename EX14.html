@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Nome do produto <input type="text" id="input_nomeP">
+    Preço compra <input type="number" id="input_preco">
+    <button onclick="cadastrar()">Cadastrar</button>
+    <button onclick="relatorio()">Relatorio</button>
+    <div id="mensagem"></div>
+
+
+</body>
+</html>
+
+<script>
+
+var contador=0;
+var listaProduto=[];
+var listaPreco= [];
+
+function cadastrar(){
+    var nomeP= input_nomeP.value;
+    var preco= input_preco.value;
+
+    listaProduto.push(nomeP);
+    listaPreco.push(preco);
+
+mensagem.innerHTML= ` `;
+
+for (var posicao=0; posicao < listaProduto.length && posicao < listaPreco.length; posicao ++){
+       var produtoLista= listaProduto[posicao];
+       var precoLista= listaPreco[posicao];
+        // mensagem.innerHTML += `${produtoLista} <br> ${precoLista}`
+
+        mensagem.innerHTML= ` <br> Total de produtos: ${listaProduto.length} <br>`
+
+} 
+}
+
+function relatorio(){
+mensagem.innerHTML+= `Produto ${contador+1}: `
+
+}
+
+</script>

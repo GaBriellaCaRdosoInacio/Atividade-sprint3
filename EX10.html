@@ -8,7 +8,7 @@
 </head>
 <body>
     nome linha do onibus: <input type="text" id="input_nomeBus">
-    <button onclick="gravar()">Gravar buzão</button> <br>
+    <button onclick="gravar()">Gravar buzao</button>
     pesquisar linha que você já pegou: <input type="text" id="input_linhaPesquisada">
     <button onclick="pesquisar()">Pesquisar</button>
     <div id="mensagem"></div>
@@ -29,12 +29,22 @@ function gravar(){
     for (var posicao=0; posicao < listaBus.length; posicao ++){
        var busLista= listaBus[posicao];
         mensagem.innerHTML += `${busLista} <br>`
-} 
-}
+
+        if (listaBus[2] == listaBus[4] && listaBus[8] == listaBus[9]){
+            mensagem.innerHTML+=`Você já pegou essa linha 4 vezes, nessa ordem: 2, 4, 8, 9 `;
+            pesquisar();
+        }
+
+        
+        // mensagem.innerHTML += `${posicao}`
+}}
+
+//percorre o vetor no for e valida, e armazena a posicao
+// utilizar tofixed só na exibicao
 
 function pesquisar(){
 
-
+    
     var linhaP= input_linhaPesquisada.value;
 
     var validacao= listaBus.indexOf(linhaP) < 0;
@@ -43,12 +53,13 @@ function pesquisar(){
         mensagem.innerHTML= `  Você nunca pegou essa linha`
     }
 
-    if (){
-        alert('sucesso')
-        if(linhaP == listaBus[2] && linhaP == listaBus[4] && linhaP == listaBus[8] && linhaP == listaBus[9]){
-mensagem.innerHTML+= `Você já pegou essa linha 4 vezes, nessa ordem: 2, 4, 8, 9 `
-    }
-   }
+
+//     if (listaBus.lenght >= 9){
+//         alert('sucesso')
+//         if(linhaP == listaBus[2] && linhaP == listaBus[4] && linhaP == listaBus[8] && linhaP == listaBus[9]){
+// mensagem.innerHTML+= `Você já pegou essa linha 4 vezes, nessa ordem: 2, 4, 8, 9 `
+//     }
+//    }
 
 
 

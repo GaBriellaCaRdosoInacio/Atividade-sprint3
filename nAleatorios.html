@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="gerar_entre_1_e_5()">Gerar entre 1 e 5 </button>
+
+</body>
+</html>
+
+<script>
+
+function gerar_entre_1_e_5(){
+var min=1;
+var max=6;
+
+var intervalo= max - min;
+
+var aleatorio= Math.random() * intervalo;
+
+var resultado= aleatorio + min
+
+    alert(`${resultado}`)
+}
+
+</script>
