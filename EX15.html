@@ -35,6 +35,8 @@ for (var posicao=0; posicao < listaProduto.length && posicao < listaPreco.length
        var produtoLista= listaProduto[posicao];
        var precoLista= listaPreco[posicao];
 } 
+
+
 }
 
 function relatorio(){
@@ -44,7 +46,7 @@ function relatorio(){
     for (var i = 0; i < listaPreco.length; i++) {
         var ilistaP= listaProduto[i];
 
-        mensagem.innerHTML = `Total de produtos: ${listaProduto.length} </br>`;
+        mensagem.innerHTML = `Total de produtos: ${listaProduto.length} </br>`
 
         mensagem2.innerHTML += `Produto ${i+1}: ${ilistaP}  </br>
         Preço de compra: R$${listaPreco}. Vender por R$${listaPreco[i] * 1.25} </br>`  
@@ -52,7 +54,7 @@ function relatorio(){
 }
 
 
-   
+
 
 
 </script>
